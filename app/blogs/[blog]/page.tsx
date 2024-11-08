@@ -27,15 +27,17 @@ const BlogPage = async () => {
 					{posts.data[0]?.attributes?.content}
 				</MarkdownRenderer>
 				<ul className="flex gap-5 flex-wrap">
-					{posts.data[0]?.attributes?.tags.map((tag: any) => (
-						<Link
-							href={"/"}
-							key={tag.id}
-							className="inline-block bg-gray-300 border rounded-full list-none text-sm px-3"
-						>
-							{tag.tag_name}
-						</Link>
-					))}
+					{posts.data[0]?.attributes?.tags.map(
+						(tag: { id: string; tag_name: string }) => (
+							<Link
+								href={"/"}
+								key={tag.id}
+								className="inline-block bg-gray-300 border rounded-full list-none text-sm px-3"
+							>
+								{tag.tag_name}
+							</Link>
+						)
+					)}
 				</ul>
 			</div>
 		</div>
