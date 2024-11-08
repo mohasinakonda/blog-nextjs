@@ -82,8 +82,6 @@ const topics = [
 	},
 ];
 const BlogsPage = async () => {
-	// const posts = await getPosts();
-
 	return (
 		<div className="px-20 grid grid-cols-12 gap-10">
 			<div className="col-span-9 grid grid-cols-3 gap-6">
