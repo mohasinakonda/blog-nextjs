@@ -1,8 +1,3 @@
-// import { MarkdownRenderer } from "@/components/mdx";
-// const getPosts = async () => {
-// 	const res = await fetch("http://localhost:1337/api/blogs");
-// 	const data = await res.json();
-// 	return data;
 import Bracelate from "@/assets/images/bracelate.jpg";
 import TeamImage from "@/assets/images/team.png";
 import Pattern from "@/assets/images/hazrat-ali-akonda-bg-image.png";
@@ -88,10 +83,7 @@ const BlogsPage = async () => {
 		<div className="px-20 grid grid-cols-12 gap-10">
 			<div className="col-span-9 grid grid-cols-3 gap-6">
 				{data.map((item) => (
-					<div
-						key={item.id}
-						className=" bg-black/20 rounded-md shadow-lg"
-					>
+					<div key={item.id} className=" bg-black/20 rounded-md shadow-lg">
 						<div className="w-full h-[200px] ">
 							<Image
 								src={item.image.src}
@@ -115,11 +107,7 @@ const BlogsPage = async () => {
 								</div>
 								<div>
 									<button className="rounded-full border p-0.5">
-										{item.bookmark ? (
-											<BookmarkFillIcon />
-										) : (
-											<BookmarkIcon />
-										)}
+										{item.bookmark ? <BookmarkFillIcon /> : <BookmarkIcon />}
 									</button>
 								</div>
 							</div>
@@ -146,9 +134,7 @@ const BlogsPage = async () => {
 							/>
 							<div>
 								<h4 className="text-lg">{item.title}</h4>
-								<p className="text-xs font-medium">
-									jan 11,2024
-								</p>
+								<p className="text-xs font-medium">jan 11,2024</p>
 							</div>
 						</Link>
 					))}
