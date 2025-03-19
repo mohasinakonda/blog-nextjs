@@ -2,7 +2,7 @@ export const Navbar = () => {
 	const avatarUrl =
 		"https://ui-avatars.com/api/?background=random&name=hazrat+akonda&format=svg";
 	return (
-		<nav className="flex justify-between px-20 items-center my-5 border-b h-20 shadow-sm ">
+		<nav className="flex justify-between px-20 items-center my-5 border-b h-20 shadow-xs ">
 			<div className="text-[48px] w-16 border-2 text-center">H</div>
 			<ul className="flex gap-6">
 				<li>About me</li>
